@@ -1,6 +1,21 @@
+
+'''
+---------------------------------------
+-- Created by:     Alireza Teimoori  --
+-- Created on:     Feb 9 2019        --
+-- Created for:    Unit 1-08         --
+-- Course Code:    ICS4U             --
+-- Teacher Name:   Chris Atkinson    --
+---------------------------------------
+-- This program generates random     --
+-- numbers and add them to array and --
+-- find the maximum and minimum in it--
+---------------------------------------
+
+In this code, the user can even CHOOSE the length of the list!
+'''
+
 import random
-
-
 
 def Maxer(array): # Max finder function
     max = array[0] # starts with letting max equal to the first box in the list
