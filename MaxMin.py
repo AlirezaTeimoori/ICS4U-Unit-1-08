@@ -2,27 +2,32 @@ import random
 
 
 
-def Maxer(array):
-    for count in range(len(array)):
-        max = 0
-        if array[count] > max:
-            max = array[count]
+def Maxer(array): # Max finder function
+    max = array[0] # starts with letting max equal to the first box in the list
+    for count in range(len(array)): # repeats for as long as the array goes
         
-    return max
+        if array[count] > max: # checks if it is higher than the previous max
+            max = array[count] # if yes, replaces the max with the new number
+        #print(max) # To show the replacing process for max
+    return max # shoot out max
 
 def Miner(array):
+    min = array[0] # starts with letting min equal to the first box in the list
     for count in range(len(array)):
-        min = 0
-        if array[count] < min:
-            min = array[count]
         
-    return min
+        if array[count] < min: # checks if it is higher than the previous min
+            min = array[count] # if yes, replaces the min with the new number
+            
+        #print(min) # To show the replacing process for min
+    return min # shoot out min
 
 ranList = [] # Define ranList as an empty list
+listLength = input("how long do you want the array to be? \n") # asking for and storing data
 
-for i in range(10):
-    ranList.append(random.randint(1,10))
-    print(ranList)
+for i in range(int(listLength)): # adds as many elements as the user wants
+    ranList.append(random.randint(1,99)) # generates random number between 1, 99
 
-print("The max number in the array is: " + str(Maxer(ranList)))
-print("The min number in the array is: " + str(Miner(ranList)))
+# output:
+print (ranList)
+print ("The max number in the array is: " + str(Maxer(ranList)))
+print ("The min number in the array is: " + str(Miner(ranList)))
